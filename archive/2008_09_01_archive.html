@@ -1,0 +1,555 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <title>TomHoppe.com: September 2008</title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="generator" content="Blogger" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="http://www.blogger.com/favicon.ico"/>
+<link rel="alternate" type="application/atom+xml" title="TomHoppe.com - Atom" href="http://www.tomhoppe.com/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="TomHoppe.com - RSS" href="http://www.tomhoppe.com/rss.xml" />
+<link rel="service.post" type="application/atom+xml" title="TomHoppe.com - Atom" href="http://www.blogger.com/feeds/6064498188306872783/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=6064498188306872783" />
+ <link rel="stylesheet" type="text/css" href="http://www.blogger.com/css/blog_controls.css"/> <link rel="stylesheet" type="text/css" href="http://www.blogger.com/dyn-css/authorization.css?targetBlogID=6064498188306872783&zx=e098ca30-f1ca-4a01-9164-7b82b52bbebe"/>
+
+    <!-- used to create popup larger image -->
+    <link rel="stylesheet" href="http://www.tomhoppe.com/css/thickbox.css" type="text/css"/>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+    <script type="text/javascript" src="http://www.tomhoppe.com/js/thickbox.js"></script>
+    <!-- used to create popup larger image -->
+    
+    <link rel="stylesheet" type="text/css" href="http://www.tomhoppe.com/css/siteStyles.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.tomhoppe.com/css/blogStyles.css" />
+    
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	
+</head>
+
+<body>
+<div id="mainCentering">
+<!-- START OF TOP SECTION -->
+<div id="borderTop" class="clearfix">
+	<img src="http://www.tomhoppe.com/images/cornerTL.gif" width="13" height="18" alt="" border="0" class="cornerL" />
+	<img src="http://www.tomhoppe.com/images/cornerTR.gif" width="13" height="18" alt="" border="0" class="cornerR" />
+</div>
+
+<div id="border1"><div id="border2"><div id="border3">
+<div id="mainContainer">
+	<div id="topBar" class="clearfix">
+		<h1>
+			<a href="http://www.tomhoppe.com">tomhoppe.com<br /></a>
+		</h1>
+		<div class="siteDesc">
+			Racing, Web Development, Photography, and Beer...Stuff that matters. 
+		</div>
+	</div>    
+<!-- END OF TOP SECTION --> 
+
+
+<!-- START OF ACTUAL BLOG -->
+
+<div id="content" class="clearfix">
+	
+	<!-- Begin #main -->
+	<div id="main"><div id="main2">
+
+	
+
+    
+		<h2 class="date-header">Monday, September 22, 2008</h2>
+	
+
+	<!-- Begin .post -->
+	<div class="post"><a name="8096459708956875670"></a>
+		
+			<h3 class="post-title">
+			<a href="http://www.tomhoppe.com/2008/09/how-to-make-macbook-pro-hibernate.html">How to make a MacBook Pro hibernate</a>
+			</h3>
+		
+
+		<div class="post-body">
+            <div>
+                <div style="clear:both;"></div><p>Since I've had the MacBook Pro I've been wanting it to "hibernate" instead of "sleep" when I close the lid. There are times when I've shut the lid, stuck it into my backpack, just to not look at it again for 3 days over a long weekend. During that time, even in regular sleep mode, the battery dies as the laptop is not all the way off. My Thinkpad on the other hand can fully hibernate, in which it turns itself all the way off and stores its current state to the hdd.</p>
+<p>Turns out that the MacBooks have the same mode, but its not an option in the menu. After a little digging, <a target="_blank" href="http://gabrito.com/post/hibernate-with-the-macbook-pro">I've found a site that tells you what to do.</a> I've outlined the steps below for "mac noobs" such as myself.</p>
+<ul>
+<li>Go to Finder, Utilities, Terminal</li>
+<li>type <span style="font-style:italic;">pmset -g | grep hibernate</span></li>
+<li>You should see that your hibernate is set for mode 3. This means when it sleeps, your items are saved to the RAM and power stays on. What you want is to set that to mode 5 which will function just like windows hibernate, and actually turn your laptop all the way off while saving where your state to the hdd. </li>
+<li>Create two aliases, one to enable mode 5, and another to set back to 3 if you want.</li>
+<li>Type <span style="font-style:italic;">alias hibernateon="sudo pmset -a hibernatemode 5"</span></li>
+<li>Type <span style="font-style:italic;">alias hibernateoff="sudo pmset -a hibernatemode 3"</span></li>
+<li>Now when you type <span style="font-style:italic;">hibernateon</span>, it will set that mode to 5. Once you do that, type <span style="font-style:italic;">pmset -g | grep hibernate</span> again to confirm that you are on mode 5</li>
+<li>Your laptop is now set to hibernate like windows when you close the lid. If you ever want to revert back, run terminal again and type <span style="font-style:italic;">hibernateoff</span></li>
+</ul><div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://www.tomhoppe.com/labels/All.html">All</a>, <a rel='tag' href="http://www.tomhoppe.com/labels/General.html">General</a></p>
+            </div>
+		</div>
+
+		<p class="post-footer">
+			<em>posted by Tom Hoppe at 5:07 PM</em>
+			
+                
+                    <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=6064498188306872783&postID=8096459708956875670&isPopup=true" onclick="window.open('https://www.blogger.com/comment.g?blogID=6064498188306872783&postID=8096459708956875670&isPopup=true', 'bloggerPopup', 'toolbar=0,scrollbars=1,location=0,statusbar=1,menubar=0,resizable=1,width=400,height=450');return false;">3 comments</a>
+                
+                
+			  
+            
+		</p>
+
+	</div>
+	<!-- End .post -->
+    
+  	<!-- Begin #comments -->
+	
+
+  	<!-- End #comments -->
+
+	
+
+    
+		<h2 class="date-header">Friday, September 19, 2008</h2>
+	
+
+	<!-- Begin .post -->
+	<div class="post"><a name="5687263809273475149"></a>
+		
+			<h3 class="post-title">
+			<a href="http://www.tomhoppe.com/2008/09/how-to-make-free-iphone-ringtones.html">How to make iPhone ringtones from MP3s</a>
+			</h3>
+		
+
+		<div class="post-body">
+            <div>
+                <div style="clear:both;"></div><p>This is easy as pie. With the below steps, you can take any MP3 and make it into a ringtone for your iPhone.</p>
+<ul>
+<li>Grab the MP3 you want to turn into a ringtone and using <a href="http://audacity.sourceforge.net/download/">Audacity</a> turn it into an MP3 that is <strong>less then 30 seconds in length.</strong></li>
+<li>Drag the newly shortened file into iTunes</li>
+<li>Find it in iTunes, right click on it and choose "Convert to AAC". It will make another version of the song.</li>
+<li>Find that song in your iTunes folder library (probably c:/..../My Documents/My Music/iTunes) and rename if from .m4a to m4r. In iTunes, delete the m4a that you made. </li>
+<li>In iTunes, go to "file" then "add file to library" and select the newly renamed m4r that you made in the step above</li>
+<li>Now you can sync with your iPhone and you will have a new ringtone to select.</p>
+</ul><div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://www.tomhoppe.com/labels/All.html">All</a>, <a rel='tag' href="http://www.tomhoppe.com/labels/General.html">General</a></p>
+            </div>
+		</div>
+
+		<p class="post-footer">
+			<em>posted by Tom Hoppe at 2:51 PM</em>
+			
+                
+                    <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=6064498188306872783&postID=5687263809273475149&isPopup=true" onclick="window.open('https://www.blogger.com/comment.g?blogID=6064498188306872783&postID=5687263809273475149&isPopup=true', 'bloggerPopup', 'toolbar=0,scrollbars=1,location=0,statusbar=1,menubar=0,resizable=1,width=400,height=450');return false;">0 comments</a>
+                
+                
+			  
+            
+		</p>
+
+	</div>
+	<!-- End .post -->
+    
+  	<!-- Begin #comments -->
+	
+
+  	<!-- End #comments -->
+
+	
+
+    
+		<h2 class="date-header">Tuesday, September 16, 2008</h2>
+	
+
+	<!-- Begin .post -->
+	<div class="post"><a name="2858802862980818953"></a>
+		
+			<h3 class="post-title">
+			<a href="http://www.tomhoppe.com/2008/09/quest-for-cheap-racing-radios.html">The Quest for cheap racing radios</a>
+			</h3>
+		
+
+		<div class="post-body">
+            <div>
+                <div style="clear:both;"></div><p>In car radios are a very "nice to have" in our amateur racing world. The crappy this is, that a nice radio setup is just south of $1k, while the bottom of the line systems are $600. I had a chance to spend that kind of cash on the race car earlier this year, and correctly opted for the data acquisition package. Having data in the car has allowed me to very quickly pick up time at new race tracks, and also find more time at my home track. Frankly, I don't see a point in even doing practice or test days w/o data.</p>
+<p>Back to radios though. I had to buy a helmet headset for a few endurance races I've done, and also my codrives with Lyman last year. With that, I had a small but expensive chunk of the system out of the way. I decided to put together a cheapo system with the rest of the components, and we'll see how it works out</p>
+<p>Below are the pieces one needs and how I got them, and for how much.</p>
+<ul>
+<li>Radios - I found Sampson Racing uses Midland 5 watt radios in their "cheap" radio package. Found mine at Bass Pro Shops for $50 for the pair on closeout. Sweet.</li>
+<li>Driver - Headset/headphones I had to buy before. $140, no way to get around that one. Any cheaper/crappy mic or headphones and the crew chief cannot hear the driver.</li>
+<li>Car - Two components needed. The car harness, and PTT. Car harness connects from the driver to the PTT button and to the Radio. I picked this up for $0 since Lyman had a busted connector on his and just bought a new one. Connector needs some re-wiring. We'll see if it works. PTT is $40 from Sampson Racing. </li>
+<li>Crew Chief - Need a fancy crew chief headset. This needs to be noise cancelling in order to work trackside while cars are going by. Most of the time these are right around $180 or so. I found some on ebay for $100 new. We'll see if that works, but it seems to be the same stuff as the more expensive one. </li>
+</ul>
+<p>The above system should work for some of the parts of the race tracks. To have full track coverage, you need nicer (read: $$$$) radios with an external antenna. Depending on finding some used ones, I will do that later, but for right now, I'll settle with having radio communications for the front half of Road Atlanta. </p>
+<p>My total outlay so far is $330. Same components, but 1/2 of the price of the bottom of the barrel system, and 1/3 the price of a middle of the road system. We'll see how it works in November at the ARRC</p><div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://www.tomhoppe.com/labels/All.html">All</a>, <a rel='tag' href="http://www.tomhoppe.com/labels/Racing.html">Racing</a></p>
+            </div>
+		</div>
+
+		<p class="post-footer">
+			<em>posted by Tom Hoppe at 4:20 PM</em>
+			
+                
+                    <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=6064498188306872783&postID=2858802862980818953&isPopup=true" onclick="window.open('https://www.blogger.com/comment.g?blogID=6064498188306872783&postID=2858802862980818953&isPopup=true', 'bloggerPopup', 'toolbar=0,scrollbars=1,location=0,statusbar=1,menubar=0,resizable=1,width=400,height=450');return false;">0 comments</a>
+                
+                
+			  
+            
+		</p>
+
+	</div>
+	<!-- End .post -->
+    
+  	<!-- Begin #comments -->
+	
+
+  	<!-- End #comments -->
+
+	
+
+    
+		<h2 class="date-header">Monday, September 15, 2008</h2>
+	
+
+	<!-- Begin .post -->
+	<div class="post"><a name="6207829041608753358"></a>
+		
+			<h3 class="post-title">
+			<a href="http://www.tomhoppe.com/2008/09/working-on-jeep-is-harder-then-i.html">Working on the Jeep is harder then I thought</a>
+			</h3>
+		
+
+		<div class="post-body">
+            <div>
+                <div style="clear:both;"></div><p>Almost done putting the Jeep back together now. We got a heck of a deal on it through craigslist so I couldn't resist pulling the trigger. Its a 4" Superlift with the RockRunner upgraded adjustable control arms. </p>
+<p>Figured with the Jeep everything is so much bigger, that it all should just be easier. Well actually couple of those bigger things just make it a pain the ass. The springs are almost 3 freaking feet tall :) Between that, the gigantic control arm that was a pain to put in, to the giant axle, dang. </p>
+<p>Last Sunday I started by taking the front suspension off. The nice thing about the big garage and 4 cars, is I can put it back together when I want. Today I finished installing the front suspension and the new extended brake lines. I still have to finish up the rear and then do some brake bleeding. We're going out of town this coming up weekend, so it probably won't be completed for a few more weeks. I'll have some "in progress" pics up soon.</p><div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://www.tomhoppe.com/labels/All.html">All</a>, <a rel='tag' href="http://www.tomhoppe.com/labels/Jeep.html">Jeep</a></p>
+            </div>
+		</div>
+
+		<p class="post-footer">
+			<em>posted by Tom Hoppe at 12:03 AM</em>
+			
+                
+                    <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=6064498188306872783&postID=6207829041608753358&isPopup=true" onclick="window.open('https://www.blogger.com/comment.g?blogID=6064498188306872783&postID=6207829041608753358&isPopup=true', 'bloggerPopup', 'toolbar=0,scrollbars=1,location=0,statusbar=1,menubar=0,resizable=1,width=400,height=450');return false;">0 comments</a>
+                
+                
+			  
+            
+		</p>
+
+	</div>
+	<!-- End .post -->
+    
+  	<!-- Begin #comments -->
+	
+
+  	<!-- End #comments -->
+
+	
+
+    
+		<h2 class="date-header">Monday, September 8, 2008</h2>
+	
+
+	<!-- Begin .post -->
+	<div class="post"><a name="5601046527489785953"></a>
+		
+			<h3 class="post-title">
+			<a href="http://www.tomhoppe.com/2008/09/all-we-got-left-is-paint.html">All we got left is the paint</a>
+			</h3>
+		
+
+		<div class="post-body">
+            <div>
+                <div style="clear:both;"></div><p>So the kitchen is 95% done! Cabinets with pimpy soft close sliders are all in. Appliances are in. Finishing touches are almost done. We picked the final paint color tonight and I'll be picking some up tomorrow to get the wall paint finished. After that, the trim/doors are going white and the crown molding gets installed. Finally the stair banister pieces are getting traded out for nice metal ones and we'll be able to call our downstairs "finished" :)</p>
+
+<div class="pictures">
+<a href="http://www.tomhoppe.com/pictures/2008_08_08_Kitchen/IMG_9164.jpg" rel="kitchen4" class="thickbox"><img src="http://www.tomhoppe.com/pictures/2008_08_08_Kitchen/thumbs/IMG_9164.jpg" border="0" height="60"></a>
+
+<a href="http://www.tomhoppe.com/pictures/2008_08_08_Kitchen/IMG_9165.jpg" rel="kitchen4" class="thickbox"><img src="http://www.tomhoppe.com/pictures/2008_08_08_Kitchen/thumbs/IMG_9165.jpg" border="0" height="60"></a>
+
+<a href="http://www.tomhoppe.com/pictures/2008_08_08_Kitchen/IMG_9166.jpg" rel="kitchen4" class="thickbox"><img src="http://www.tomhoppe.com/pictures/2008_08_08_Kitchen/thumbs/IMG_9166.jpg" border="0" height="60"></a>
+
+<p><a href="http://picasaweb.google.com/trhoppe/2008_08_08_Kitchen">View the pictures using Picasa instead</a></p>
+</div><div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://www.tomhoppe.com/labels/All.html">All</a>, <a rel='tag' href="http://www.tomhoppe.com/labels/General.html">General</a>, <a rel='tag' href="http://www.tomhoppe.com/labels/Pictures.html">Pictures</a></p>
+            </div>
+		</div>
+
+		<p class="post-footer">
+			<em>posted by Tom Hoppe at 11:25 PM</em>
+			
+                
+                    <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=6064498188306872783&postID=5601046527489785953&isPopup=true" onclick="window.open('https://www.blogger.com/comment.g?blogID=6064498188306872783&postID=5601046527489785953&isPopup=true', 'bloggerPopup', 'toolbar=0,scrollbars=1,location=0,statusbar=1,menubar=0,resizable=1,width=400,height=450');return false;">2 comments</a>
+                
+                
+			  
+            
+		</p>
+
+	</div>
+	<!-- End .post -->
+    
+  	<!-- Begin #comments -->
+	
+
+  	<!-- End #comments -->
+
+	
+
+    
+
+	<!-- Begin .post -->
+	<div class="post"><a name="5221289501637047418"></a>
+		
+			<h3 class="post-title">
+			<a href="http://www.tomhoppe.com/2008/09/hiking-in-north-georgia.html">Hiking in North Georgia</a>
+			</h3>
+		
+
+		<div class="post-body">
+            <div>
+                <div style="clear:both;"></div><p>After the Barber race on Memorial Day weekend, we decided to go hiking on the Amicalola Falls trails around Ellljay, GA. The hiking was pretty good, but like last time, the views weren't quite there. There were more trees then you know what to do with, but no clearings or balds to see any views. We got to stop by the falls and walk the 600 steps to the top. Good exercise :)</p><p>This area is the start of the Appalachian trail on the south end. I still want to take a long weekend and go hike some of the trail. We'll see when we get to it</p>
+<div class="pictures">
+<a href="http://www.tomhoppe.com/pictures/2008_08_01_Hiking/IMG_9013.jpg" rel="hiking" class="thickbox"><img src="http://www.tomhoppe.com/pictures/2008_08_01_Hiking/thumbs/IMG_9013.jpg" border="0" height="60"></a>
+
+<a href="http://www.tomhoppe.com/pictures/2008_08_01_Hiking/IMG_9099.jpg" rel="hiking" class="thickbox"><img src="http://www.tomhoppe.com/pictures/2008_08_01_Hiking/thumbs/IMG_9099.jpg" border="0" height="60"></a>
+
+<a href="http://www.tomhoppe.com/pictures/2008_08_01_Hiking/IMG_9125.jpg" rel="hiking" class="thickbox"><img src="http://www.tomhoppe.com/pictures/2008_08_01_Hiking/thumbs/IMG_9125.jpg" border="0" height="60"></a>
+
+<a href="http://www.tomhoppe.com/pictures/2008_08_01_Hiking/IMG_9143.jpg" rel="hiking" class="thickbox"><img src="http://www.tomhoppe.com/pictures/2008_08_01_Hiking/thumbs/IMG_9143.jpg" border="0" height="60"></a>
+
+<a href="http://www.tomhoppe.com/pictures/2008_08_01_Hiking/IMG_9152.jpg" rel="hiking" class="thickbox"><img src="http://www.tomhoppe.com/pictures/2008_08_01_Hiking/thumbs/IMG_9152.jpg" border="0" height="60"></a>
+
+<a href="http://www.tomhoppe.com/pictures/2008_08_01_Hiking/IMG_9156.jpg" rel="hiking" class="thickbox"><img src="http://www.tomhoppe.com/pictures/2008_08_01_Hiking/thumbs/IMG_9156.jpg" border="0" height="60"></a>
+
+<p><a href="http://picasaweb.google.com/trhoppe/2008_08_01_Hiking">View the pictures using Picasa instead</a></p>
+</div><div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://www.tomhoppe.com/labels/All.html">All</a>, <a rel='tag' href="http://www.tomhoppe.com/labels/General.html">General</a>, <a rel='tag' href="http://www.tomhoppe.com/labels/Pictures.html">Pictures</a></p>
+            </div>
+		</div>
+
+		<p class="post-footer">
+			<em>posted by Tom Hoppe at 11:13 PM</em>
+			
+                
+                    <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=6064498188306872783&postID=5221289501637047418&isPopup=true" onclick="window.open('https://www.blogger.com/comment.g?blogID=6064498188306872783&postID=5221289501637047418&isPopup=true', 'bloggerPopup', 'toolbar=0,scrollbars=1,location=0,statusbar=1,menubar=0,resizable=1,width=400,height=450');return false;">0 comments</a>
+                
+                
+			  
+            
+		</p>
+
+	</div>
+	<!-- End .post -->
+    
+  	<!-- Begin #comments -->
+	
+
+  	<!-- End #comments -->
+
+	
+
+    
+		<h2 class="date-header">Friday, September 5, 2008</h2>
+	
+
+	<!-- Begin .post -->
+	<div class="post"><a name="5667538200720722465"></a>
+		
+			<h3 class="post-title">
+			<a href="http://www.tomhoppe.com/2008/09/get-parameter-from-querystring-via.html">Get Parameter from Querystring via Javascript (getParam)</a>
+			</h3>
+		
+
+		<div class="post-body">
+            <div>
+                <div style="clear:both;"></div><p>A while back I posted a method to <a href="http://www.tomhoppe.com/2007/07/snippet-for-parsing-querystring-through.html">grab all the querystrings out of a URL and parse them into arrays</a>. While that is very useful sometimes, its overkill for other situations, when you have 1 or 2 variables in the querystring and you know their names already. For those times, I like to use a function "getParam". It takes in the variable name and returns you its value from the querystring.</p>
+<pre class="codeBlock">
+function getParam(name) {
+  var regexS = "[\\?&]"+name+"=([^&#]*)";
+  var regex = new RegExp( regexS );
+  var tmpURL = window.location.href;
+  var results = regex.exec( tmpURL );
+  if( results == null )
+    return "";
+  else
+    return results[1];
+}
+</pre><div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://www.tomhoppe.com/labels/All.html">All</a>, <a rel='tag' href="http://www.tomhoppe.com/labels/Javascript.html">Javascript</a></p>
+            </div>
+		</div>
+
+		<p class="post-footer">
+			<em>posted by Tom Hoppe at 11:40 AM</em>
+			
+                
+                    <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=6064498188306872783&postID=5667538200720722465&isPopup=true" onclick="window.open('https://www.blogger.com/comment.g?blogID=6064498188306872783&postID=5667538200720722465&isPopup=true', 'bloggerPopup', 'toolbar=0,scrollbars=1,location=0,statusbar=1,menubar=0,resizable=1,width=400,height=450');return false;">0 comments</a>
+                
+                
+			  
+            
+		</p>
+
+	</div>
+	<!-- End .post -->
+    
+  	<!-- Begin #comments -->
+	
+
+  	<!-- End #comments -->
+
+	
+
+    
+		<h2 class="date-header">Tuesday, September 2, 2008</h2>
+	
+
+	<!-- Begin .post -->
+	<div class="post"><a name="2427513845918378877"></a>
+		
+			<h3 class="post-title">
+			<a href="http://www.tomhoppe.com/2008/09/barber.html">Barber!</a>
+			</h3>
+		
+
+		<div class="post-body">
+            <div>
+                <div style="clear:both;"></div><p>Fun weekend! First off, the facilities at Barber are top notch. Everything is "F1 Quality". From the manicured grass to the buildings/bathrooms, to the timing tower spectating areas with TV cameras on all the parts of the track. </p>
+<p>I've never been to Barber before, so as I posted about previously, I played a bunch of video games to try to get used to the track before I drove it. It was certainly time well spent, as other then the obvious G's that you feel, the visuals were right on with what I was seeing in real life, down to the braking points/zones.</p>
+<p>I started out with qualifying on Saturday morning. I was able to use the new Dash3 part of my DL1 to display sector times and lap times, and I was able to run some decent times right off the bat. After only 6 laps on the track, I qualified 2nd in ITA and right after hometown boy Chuck Baader in his BMW, who was sitting on pole. Chuck put in a new motor since last season, and my time was faster then everyone's lap times from this race last year, so I felt pretty good. </p>
+<p>In no time at all it was time for the afternoon race. I started on the inside with Chuck in front of me. Got a decent, but not great start and took it easy for the first few turns. In the corkscrew turn, the 3rd place qualifier, Steve, had his air flow meter break and basically stall out on the outside of the turn. Just happens that I was on the inside, and the 4th place car of Willie Phee was right behind Steve. This allowed me to get a huge lead on Willie. By this time Chuck has pretty much checked out on the rest of us, so it was a very boring 15 lap race for me, basically driving around by myself and getting bored. </p>
+<p>In nice contrast, Sunday ended up being a lot more exciting. I tried to find more time out there during qualifying, and got closer to Chuck, but still qualified 2nd. This time I got a GREAT start and pulled right alongside of Chuck before turn 1. As we entered Turn 1 three wide, Chuck got hit, and in turn hit me, which sent both of us off into the grass, still on the throttle, not letting up. Steve was able to get by both of us and started off a great battle with Chuck for the lead, while I hung back and watched. I was being held up in the turns by a higher classed (ITS) RX7, which was supposed to be much faster then I was. I ended up hitting him a few times in turns trying to push him out of my way as I couldn't pass him cleanly. After a few laps, he got faster and then started getting in the way of the Chuck/Steve battle ahead of me. In the meantime, my car started overheating a bit. I had a bunch of grass stuck in the radiator opening, and also was right on this RX7's bumper not getting any airflow. I lost focus in a few turns and lost a bit of ground to the lead pack. Chuck ended up passing Steve for the lead and I started reeling both of them in from 3rd. After a few fun laps of chasing and battling, I was able to pass Steve under braking into the hairpin and started to try to chase Chuck down. Unfortunately I wasn't able to come back all the way and ended up in 2nd again, with a 2 second margin to Chuck. Not bad!</p>
+<p>All in all, I feel good for this being my first time at Barber. Both Steve and Chuck live within miles of the track and have a lot of experience here. Chuck's 325 BMW is also a lot better here then my car. He's got a LOT more torque to get out of the tight turns, and my car never gets a chance to stretch its legs. Never even get into 5th gear. I also ended up eating two fairly new front tires because of all the wheelspin that I get out of the very slow turns. </p>
+<p>Now I take some time off and work on the Jeep/House. Going to start working on the car again in a few weeks to get it ready for the ARRC in November.</p><div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://www.tomhoppe.com/labels/All.html">All</a>, <a rel='tag' href="http://www.tomhoppe.com/labels/Racing.html">Racing</a></p>
+            </div>
+		</div>
+
+		<p class="post-footer">
+			<em>posted by Tom Hoppe at 2:38 PM</em>
+			
+                
+                    <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=6064498188306872783&postID=2427513845918378877&isPopup=true" onclick="window.open('https://www.blogger.com/comment.g?blogID=6064498188306872783&postID=2427513845918378877&isPopup=true', 'bloggerPopup', 'toolbar=0,scrollbars=1,location=0,statusbar=1,menubar=0,resizable=1,width=400,height=450');return false;">0 comments</a>
+                
+                
+			  
+            
+		</p>
+
+	</div>
+	<!-- End .post -->
+    
+  	<!-- Begin #comments -->
+	
+
+  	<!-- End #comments -->
+
+	
+	</div>
+	</div>
+
+	<!-- End #main -->
+
+
+	<!-- Begin #sidebar -->
+	<div id="sidebar"><div id="sidebar2">
+   
+	<h2 class="sidebar-title">Previous Posts</h2>
+    	<ul id="recently">
+		    
+        	<li><a href="http://www.tomhoppe.com/2009/02/canon-40d.html">Canon 40D!</a></li>
+		    
+        	<li><a href="http://www.tomhoppe.com/2009/02/car-in-shop-and-beer.html">Car in the shop and PBR</a></li>
+		    
+        	<li><a href="http://www.tomhoppe.com/2009/02/cheap-digital-camber-gauge.html">Cheap Digital Camber Gauge</a></li>
+		    
+        	<li><a href="http://www.tomhoppe.com/2009/02/baps-shri-swaminarayan-mandir.html">BAPS Shri Swaminarayan Mandir</a></li>
+		    
+        	<li><a href="http://www.tomhoppe.com/2009/02/house-wip.html">House WIP</a></li>
+		    
+        	<li><a href="http://www.tomhoppe.com/2009/01/remodel-continues-finishes.html">The remodel continues (finishes?)</a></li>
+		    
+        	<li><a href="http://www.tomhoppe.com/2009/01/how-many-times-does-x-occur-in-string.html">How many times does &quot;x&quot; occur in a string?</a></li>
+		    
+        	<li><a href="http://www.tomhoppe.com/2008/12/its-end-of-world.html">Its the end of the world...</a></li>
+		    
+        	<li><a href="http://www.tomhoppe.com/2008/12/steamboat.html">Steamboat!</a></li>
+		    
+        	<li><a href="http://www.tomhoppe.com/2008/12/time-flies-when-you-are.html">Time flies when you are ......</a></li>
+		    
+            <li><a href="http://www.tomhoppe.com/labels/All.html">All Previous</a></li>
+		</ul>
+        
+    <h2 class="sidebar-title">Categories</h2>
+   	<ul>
+    	<li><a href="http://www.tomhoppe.com/labels/All.html">All</a></li>
+        <li><a href="http://www.tomhoppe.com/labels/CSS.html">CSS</a></li>
+    	<li><a href="http://www.tomhoppe.com/labels/General.html">General (Misc)</a></li>
+        <li><a href="http://www.tomhoppe.com/labels/Javascript.html">Javascript</a></li>
+        <li><a href="http://www.tomhoppe.com/labels/Jeep.html">Jeep</a></li>
+        <li><a href="http://www.tomhoppe.com/labels/Pictures.html">Pictures</a></li>
+        <li><a href="http://www.tomhoppe.com/labels/Racing.html">Racing</a></li>
+    </ul>
+    
+    
+	<h2 class="sidebar-title">Archives</h2>
+    	<ul class="archive-list">
+	  		
+	    	<li><a href="http://www.tomhoppe.com/2007_07_01_archive.html">July 2007</a></li>
+			
+	    	<li><a href="http://www.tomhoppe.com/2008_02_01_archive.html">February 2008</a></li>
+			
+	    	<li><a href="http://www.tomhoppe.com/2008_03_01_archive.html">March 2008</a></li>
+			
+	    	<li><a href="http://www.tomhoppe.com/2008_04_01_archive.html">April 2008</a></li>
+			
+	    	<li><a href="http://www.tomhoppe.com/2008_05_01_archive.html">May 2008</a></li>
+			
+	    	<li><a href="http://www.tomhoppe.com/2008_06_01_archive.html">June 2008</a></li>
+			
+	    	<li><a href="http://www.tomhoppe.com/2008_07_01_archive.html">July 2008</a></li>
+			
+	    	<li><a href="http://www.tomhoppe.com/2008_08_01_archive.html">August 2008</a></li>
+			
+	    	<li><a href="http://www.tomhoppe.com/2008_09_01_archive.html">September 2008</a></li>
+			
+	    	<li><a href="http://www.tomhoppe.com/2008_10_01_archive.html">October 2008</a></li>
+			
+	    	<li><a href="http://www.tomhoppe.com/2008_11_01_archive.html">November 2008</a></li>
+			
+	    	<li><a href="http://www.tomhoppe.com/2008_12_01_archive.html">December 2008</a></li>
+			
+	    	<li><a href="http://www.tomhoppe.com/2009_01_01_archive.html">January 2009</a></li>
+			
+	    	<li><a href="http://www.tomhoppe.com/2009_02_01_archive.html">February 2009</a></li>
+			
+            <li><a href="http://www.tomhoppe.com/labels/All.html">All Previous</a></li>
+		</ul>
+	
+  
+	
+
+	<p id="powered-by" style="padding:0 0 10px 0;"><a href="http://www.blogger.com"><img src="http://buttons.blogger.com/bloggerbutton1.gif" alt="Powered by Blogger" border="0" /></a></p>
+
+	</div></div>
+<!-- End #sidebar -->
+	
+</div>
+<div style="clear:both;"></div>
+<!-- END OF BLOG -->
+</div>
+</div></div></div>
+
+<!-- START OF BOTTOM SECTION -->	
+<div id="borderBottom" class="clearfix">
+	<img src="http://www.tomhoppe.com/images/cornerBL.gif" width="12" height="22" alt="" border="0" class="cornerL" />
+	<img src="http://www.tomhoppe.com/images/cornerBR.gif" width="12" height="22" alt="" border="0" class="cornerR" />
+</div>
+<!-- END OF BOTTOM SECTION -->
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-4655438-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+
+</html>

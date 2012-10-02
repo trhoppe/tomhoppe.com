@@ -1,0 +1,456 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <title>TomHoppe.com: August 2008</title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="generator" content="Blogger" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="http://www.blogger.com/favicon.ico"/>
+<link rel="alternate" type="application/atom+xml" title="TomHoppe.com - Atom" href="http://www.tomhoppe.com/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="TomHoppe.com - RSS" href="http://www.tomhoppe.com/rss.xml" />
+<link rel="service.post" type="application/atom+xml" title="TomHoppe.com - Atom" href="http://www.blogger.com/feeds/6064498188306872783/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=6064498188306872783" />
+ <link rel="stylesheet" type="text/css" href="http://www.blogger.com/css/blog_controls.css"/> <link rel="stylesheet" type="text/css" href="http://www.blogger.com/dyn-css/authorization.css?targetBlogID=6064498188306872783&zx=e098ca30-f1ca-4a01-9164-7b82b52bbebe"/>
+
+    <!-- used to create popup larger image -->
+    <link rel="stylesheet" href="http://www.tomhoppe.com/css/thickbox.css" type="text/css"/>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+    <script type="text/javascript" src="http://www.tomhoppe.com/js/thickbox.js"></script>
+    <!-- used to create popup larger image -->
+    
+    <link rel="stylesheet" type="text/css" href="http://www.tomhoppe.com/css/siteStyles.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.tomhoppe.com/css/blogStyles.css" />
+    
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	
+</head>
+
+<body>
+<div id="mainCentering">
+<!-- START OF TOP SECTION -->
+<div id="borderTop" class="clearfix">
+	<img src="http://www.tomhoppe.com/images/cornerTL.gif" width="13" height="18" alt="" border="0" class="cornerL" />
+	<img src="http://www.tomhoppe.com/images/cornerTR.gif" width="13" height="18" alt="" border="0" class="cornerR" />
+</div>
+
+<div id="border1"><div id="border2"><div id="border3">
+<div id="mainContainer">
+	<div id="topBar" class="clearfix">
+		<h1>
+			<a href="http://www.tomhoppe.com">tomhoppe.com<br /></a>
+		</h1>
+		<div class="siteDesc">
+			Racing, Web Development, Photography, and Beer...Stuff that matters. 
+		</div>
+	</div>    
+<!-- END OF TOP SECTION --> 
+
+
+<!-- START OF ACTUAL BLOG -->
+
+<div id="content" class="clearfix">
+	
+	<!-- Begin #main -->
+	<div id="main"><div id="main2">
+
+	
+
+    
+		<h2 class="date-header">Wednesday, August 27, 2008</h2>
+	
+
+	<!-- Begin .post -->
+	<div class="post"><a name="887840998683285337"></a>
+		
+			<h3 class="post-title">
+			<a href="http://www.tomhoppe.com/2008/08/2-ways-of-javascript-menu-or-navigation.html">2 ways of Javascript menu or navigation highlighting</a>
+			</h3>
+		
+
+		<div class="post-body">
+            <div>
+                <div style="clear:both;"></div><p>The following two ways are the way I do client side javascript menu highlighting. These work well if you have a site navigation or menu and you want to dynamically highlight the page that you are currently on. I use Method 1 when I have only a few items in the nav, as the JS for it is super easy, or I need to have relative URLs in my menu. Method 2 is better when there are a lot of items, as it relies only on the href and url and doesn't need any extra stuff in the HTML. It does need absolute URLs in the menu href's though in order to match correctly with the url. </p>
+<p><span style="font-weight:bold;">Method 1</span> - This method relies on the fact that you will put id's on each of the a elements with the value of the file name of that file. The HTML shows what I mean. The JS then just looks at the file name of the URL and makes that ID active. Super easy. There is also an "else" statement at the end of the JS so if the file name is blank because you are on "http://yourdomain.com/" it goes ahead and highlights the index menu item.</p>
+<pre class="codeBlock">
+&lt;div id="topMenu"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a id="index" href=""&gt;Blog&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a id="about" href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a id="race_car" href="race_car.html"&gt;Race Car&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a id="contact" href="contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;            
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;script type="text/javascript" language="javascript"&gt;
+var fileName=location.href.toLowerCase().substring( location.href.lastIndexOf("/")+1 ).split('.')[0];
+if (document.getElementById(fileName)) {document.getElementById(fileName).className = "active";}
+else {if (fileName == '') {document.getElementById('index').className = "active";}}
+&lt;/script&gt;
+</pre>
+<p><span style="font-weight:bold;">Method 2</span> - This method does not need any id's in the a elements. What it does it look through the href statements in your menu and compares them to the URL. This method works better for larger menus.</p> 
+<pre class="codeBlock">
+&lt;div id="topMenu"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="http://www.tomhoppe.com/test/index.html"&gt;Blog&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="http://www.tomhoppe.com/test/about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="http://www.tomhoppe.com/test/race_car.html"&gt;Race Car&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="http://www.tomhoppe.com/test/contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;            
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;script type="text/javascript" language="javascript"&gt;
+var theUrl = location.href.toLowerCase();
+var navLinks = document.getElementById('topMenu').getElementsByTagName('a');
+
+if (theUrl == 'http://www.tomhoppe.com/test/') { navLinks[0].className = 'active'; }
+else { 
+    for (var i=0; i&lt;navLinks.length; i++) {
+        var NavLinkUrl = navLinks[i].getAttribute('href').toLowerCase();
+        if (NavLinkUrl == theUrl) {navLinks[i].className = 'active';}
+    }
+}
+&lt;/script&gt;
+</pre><div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://www.tomhoppe.com/labels/All.html">All</a>, <a rel='tag' href="http://www.tomhoppe.com/labels/CSS.html">CSS</a>, <a rel='tag' href="http://www.tomhoppe.com/labels/Javascript.html">Javascript</a></p>
+            </div>
+		</div>
+
+		<p class="post-footer">
+			<em>posted by Tom Hoppe at 2:29 PM</em>
+			
+                
+                    <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=6064498188306872783&postID=887840998683285337&isPopup=true" onclick="window.open('https://www.blogger.com/comment.g?blogID=6064498188306872783&postID=887840998683285337&isPopup=true', 'bloggerPopup', 'toolbar=0,scrollbars=1,location=0,statusbar=1,menubar=0,resizable=1,width=400,height=450');return false;">0 comments</a>
+                
+                
+			  
+            
+		</p>
+
+	</div>
+	<!-- End .post -->
+    
+  	<!-- Begin #comments -->
+	
+
+  	<!-- End #comments -->
+
+	
+
+    
+
+	<!-- Begin .post -->
+	<div class="post"><a name="9153686744401600209"></a>
+		
+			<h3 class="post-title">
+			<a href="http://www.tomhoppe.com/2008/08/does-training-on-video-game-actually.html">Does training on a video game actually help you in racing?</a>
+			</h3>
+		
+
+		<div class="post-body">
+            <div>
+                <div style="clear:both;"></div><p>I've got a race at Barber Motorsports park in Birmingam, AL this weekend. As someone at work called it "LA" for "Lower Alabama". I have been there a few times for Grand Am races to spectate, but never driven the track. With the wear and tear implications,the fact thats its already a 3 race weekend (I'm running a SARRC Race Sat and Sunday, and Dan, the previous car owner, is driving in the Saturday ProIT), and the fact that I wanted to do this little experiment, I'm not running the test day on Friday. That means my first view/action on this track will be qualifying on Saturday morning for the SARRC race.</p>
+<p>I'm usually pretty good at getting up to speed because of my autox experience, so I'm not TOO worried about this. Just in case though, I've spent quite a few hours behind the wheel of a couple of PC Racing Sims on the track. The two sims I've been playing are Race07 and rFactor. They are both fairly realistic and with my wheel/pedal setup, feel great. Also, compared to a few real videos of the track, I think they have the layout and corners fairly nailed. I've been driving a Mini Cooper in Race07, as its the closest thing to my Integra, and a VW Rabbit in rFactor. </p>
+<p>I've probably got about 2 hours or so of video game track time now and plan to spend another hour or so over the next couple of days. We'll see how close the game is to real life and if things like brake points and landmarks are close enough so I can qualify near the pointy end of the field!</p>
+<p><a href="http://www.roadraceautox.com/showthread.php?t=19469">I also posted on the roadraceautox.com forum to see what others thought</a></p><div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://www.tomhoppe.com/labels/All.html">All</a>, <a rel='tag' href="http://www.tomhoppe.com/labels/Racing.html">Racing</a></p>
+            </div>
+		</div>
+
+		<p class="post-footer">
+			<em>posted by Tom Hoppe at 11:26 AM</em>
+			
+                
+                    <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=6064498188306872783&postID=9153686744401600209&isPopup=true" onclick="window.open('https://www.blogger.com/comment.g?blogID=6064498188306872783&postID=9153686744401600209&isPopup=true', 'bloggerPopup', 'toolbar=0,scrollbars=1,location=0,statusbar=1,menubar=0,resizable=1,width=400,height=450');return false;">0 comments</a>
+                
+                
+			  
+            
+		</p>
+
+	</div>
+	<!-- End .post -->
+    
+  	<!-- Begin #comments -->
+	
+
+  	<!-- End #comments -->
+
+	
+
+    
+		<h2 class="date-header">Wednesday, August 20, 2008</h2>
+	
+
+	<!-- Begin .post -->
+	<div class="post"><a name="8033699240271125907"></a>
+		
+			<h3 class="post-title">
+			<a href="http://www.tomhoppe.com/2008/08/work-work-work-work.html">Work work work work .......</a>
+			</h3>
+		
+
+		<div class="post-body">
+            <div>
+                <div style="clear:both;"></div><p>I've noticed that after working a TON, as in 80+ hour weeks for a few weeks, when that stops and I go back to "normal", I have a real hard time adjusting to "normal" life. I get home and its as if my brain is used to still running at 100mph and not being able to just "sit still". Real wierd feeling. Almost as if I'm lost just relaxing, and always feeling like its wierd that I'm not "doing something".</p>
+
+<p>Or maybe I just need a vacation ...... :)</p><div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://www.tomhoppe.com/labels/All.html">All</a>, <a rel='tag' href="http://www.tomhoppe.com/labels/CSS.html">CSS</a>, <a rel='tag' href="http://www.tomhoppe.com/labels/Javascript.html">Javascript</a></p>
+            </div>
+		</div>
+
+		<p class="post-footer">
+			<em>posted by Tom Hoppe at 3:33 PM</em>
+			
+                
+                    <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=6064498188306872783&postID=8033699240271125907&isPopup=true" onclick="window.open('https://www.blogger.com/comment.g?blogID=6064498188306872783&postID=8033699240271125907&isPopup=true', 'bloggerPopup', 'toolbar=0,scrollbars=1,location=0,statusbar=1,menubar=0,resizable=1,width=400,height=450');return false;">0 comments</a>
+                
+                
+			  
+            
+		</p>
+
+	</div>
+	<!-- End .post -->
+    
+  	<!-- Begin #comments -->
+	
+
+  	<!-- End #comments -->
+
+	
+
+    
+
+	<!-- Begin .post -->
+	<div class="post"><a name="2844518910784232494"></a>
+		
+			<h3 class="post-title">
+			<a href="http://www.tomhoppe.com/2008/08/first-foray-in-php.html">First foray in PHP</a>
+			</h3>
+		
+
+		<div class="post-body">
+            <div>
+                <div style="clear:both;"></div><p>So I've been a windows guy personally. Its just always what the companies where I worked used, and what I personally used. The <a href="http://www.roadraceautox.com">web forum that I run</a> has been using an antiquated ASP forum software for a while though, and it was time to move on. After evaluating some of the options, looks like vBulletin using PHP was the best one. </p>
+<p>I have to say that I'm very impressed with my experience so far. PHP is installed and has been running like a champ on our IIS 6.0 server. The vBulletin and mySQL installs both went super smooth and I had the new forum up and running and data transferred in no time. I also made some custom php pages for redirects and the like, as well as a few edits to vBulletin's pages. </p><p>I'm happy with the speed in which I was able to sort of "pick up" php. I was a little worried at first about being able to jump into it, but its like an "easy" ASP with a little bit of asp and javascript syntax all thrown into one. All in all, easy to learn and because of the community support, there is all kinds of mySQL and php info out there on google.</p><div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://www.tomhoppe.com/labels/All.html">All</a>, <a rel='tag' href="http://www.tomhoppe.com/labels/CSS.html">CSS</a>, <a rel='tag' href="http://www.tomhoppe.com/labels/Javascript.html">Javascript</a></p>
+            </div>
+		</div>
+
+		<p class="post-footer">
+			<em>posted by Tom Hoppe at 3:27 PM</em>
+			
+                
+                    <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=6064498188306872783&postID=2844518910784232494&isPopup=true" onclick="window.open('https://www.blogger.com/comment.g?blogID=6064498188306872783&postID=2844518910784232494&isPopup=true', 'bloggerPopup', 'toolbar=0,scrollbars=1,location=0,statusbar=1,menubar=0,resizable=1,width=400,height=450');return false;">0 comments</a>
+                
+                
+			  
+            
+		</p>
+
+	</div>
+	<!-- End .post -->
+    
+  	<!-- Begin #comments -->
+	
+
+  	<!-- End #comments -->
+
+	
+
+    
+		<h2 class="date-header">Monday, August 11, 2008</h2>
+	
+
+	<!-- Begin .post -->
+	<div class="post"><a name="2578811448765889401"></a>
+		
+			<h3 class="post-title">
+			<a href="http://www.tomhoppe.com/2008/08/regular-expression-cheat-sheet.html">Regular Expression Cheat Sheet</a>
+			</h3>
+		
+
+		<div class="post-body">
+            <div>
+                <div style="clear:both;"></div><p>I just wanted to give myself a reference for a regular expression cheat sheet. This is much easier then forgetting and having to google for what I need. Pretty much all you ever need to know to setup a regexp.</p>
+
+<table>
+<tbody><tr valign="top">
+<td><code>.</code></td>
+<td>Matches any single character (many applications exclude newlines, and exactly which characters are considered newlines is flavor, character encoding, and platform specific, but it is safe to assume that the line feed character is included). Within POSIX bracket expressions, the dot character matches a literal dot. For example, <code>a.c</code> matches "<i>abc</i>", etc., but <code>[a.c]</code> matches only "<i>a</i>", "<i>.</i>", or "<i>c</i>".</td>
+
+</tr>
+<tr valign="top">
+<td><code>[&nbsp;]</code></td>
+<td>A bracket expression. Matches a single character that is contained within the brackets. For example, <code>[abc]</code> matches "<i>a</i>", "<i>b</i>", or "<i>c</i>". <code>[a-z]</code> specifies a range which matches any lowercase letter from "<i>a</i>" to "<i>z</i>". These forms can be mixed: <code>[abcx-z]</code> matches "<i>a</i>", "<i>b</i>", "<i>c</i>", "<i>x</i>", "<i>y</i>", and "<i>z</i>", as does <code>[a-cx-z]</code>.
+
+<p>The <code>-</code> character is treated as a literal character if it is the last or the first character within the brackets, or if it is escaped with a backslash: <code>[abc-]</code>, <code>[-abc]</code>, or <code>[a\-bc]</code>.</p>
+</td>
+</tr>
+<tr valign="top">
+<td><code>[^&nbsp;]</code></td>
+
+<td>Matches a single character that is not contained within the brackets. For example, <code>[^abc]</code> matches any character other than "<i>a</i>", "<i>b</i>", or "<i>c</i>". <code>[^a-z]</code> matches any single character that is not a lowercase letter from "<i>a</i>" to "<i>z</i>". As above, literal characters and ranges can be mixed.</td>
+
+</tr>
+<tr valign="top">
+<td><code>^</code></td>
+<td>Matches the starting position within the string. In line-based tools, it matches the starting position of any line.</td>
+</tr>
+<tr valign="top">
+<td><code>$</code></td>
+<td>Matches the ending position of the string or the position just before a string-ending newline. In line-based tools, it matches the ending position of any line.</td>
+</tr>
+<tr valign="top">
+<td><code>\(&nbsp;\)</code></td>
+
+<td>Defines a marked subexpression. The string matched within the parentheses can be recalled later (see the next entry, <code>\<i>n</i></code>). A marked subexpression is also called a block or capturing group.</td>
+</tr>
+<tr valign="top">
+<td><code>\<i>n</i></code></td>
+<td>Matches what the <i>n</i>th marked subexpression matched, where <i>n</i> is a digit from 1 to 9. This construct is theoretically <b>irregular</b> and was not adopted in the POSIX ERE syntax. Some tools allow referencing more than nine capturing groups.</td>
+
+</tr>
+<tr valign="top">
+<td><code>*</code></td>
+<td>Matches the preceding element zero or more times. For example, <code>ab*c</code> matches "<i>ac</i>", "<i>abc</i>", "<i>abbbc</i>", etc. <code>[xyz]*</code> matches "", "<i>x</i>", "<i>y</i>", "<i>z</i>", "<i>zx</i>", "<i>zyx</i>", "<i>xyzzy</i>", and so on. <code>\(ab\)*</code> matches "", "<i>ab</i>", "<i>abab</i>", "<i>ababab</i>", and so on.</td>
+
+</tr>
+<tr valign="top">
+<td><code>\{<i>m</i>,<i>n</i>\}</code></td>
+<td>Matches the preceding element at least <i>m</i> and not more than <i>n</i> times. For example, <code>a\{3,5\}</code> matches only "<i>aaa</i>", "<i>aaaa</i>", and "<i>aaaaa</i>". This is not found in a few, older instances of regular expressions.</td>
+
+</tr>
+</tbody></table><div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://www.tomhoppe.com/labels/All.html">All</a>, <a rel='tag' href="http://www.tomhoppe.com/labels/CSS.html">CSS</a>, <a rel='tag' href="http://www.tomhoppe.com/labels/Javascript.html">Javascript</a></p>
+            </div>
+		</div>
+
+		<p class="post-footer">
+			<em>posted by Tom Hoppe at 6:58 PM</em>
+			
+                
+                    <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=6064498188306872783&postID=2578811448765889401&isPopup=true" onclick="window.open('https://www.blogger.com/comment.g?blogID=6064498188306872783&postID=2578811448765889401&isPopup=true', 'bloggerPopup', 'toolbar=0,scrollbars=1,location=0,statusbar=1,menubar=0,resizable=1,width=400,height=450');return false;">0 comments</a>
+                
+                
+			  
+            
+		</p>
+
+	</div>
+	<!-- End .post -->
+    
+  	<!-- Begin #comments -->
+	
+
+  	<!-- End #comments -->
+
+	
+	</div>
+	</div>
+
+	<!-- End #main -->
+
+
+	<!-- Begin #sidebar -->
+	<div id="sidebar"><div id="sidebar2">
+   
+	<h2 class="sidebar-title">Previous Posts</h2>
+    	<ul id="recently">
+		    
+        	<li><a href="http://www.tomhoppe.com/2009/02/canon-40d.html">Canon 40D!</a></li>
+		    
+        	<li><a href="http://www.tomhoppe.com/2009/02/car-in-shop-and-beer.html">Car in the shop and PBR</a></li>
+		    
+        	<li><a href="http://www.tomhoppe.com/2009/02/cheap-digital-camber-gauge.html">Cheap Digital Camber Gauge</a></li>
+		    
+        	<li><a href="http://www.tomhoppe.com/2009/02/baps-shri-swaminarayan-mandir.html">BAPS Shri Swaminarayan Mandir</a></li>
+		    
+        	<li><a href="http://www.tomhoppe.com/2009/02/house-wip.html">House WIP</a></li>
+		    
+        	<li><a href="http://www.tomhoppe.com/2009/01/remodel-continues-finishes.html">The remodel continues (finishes?)</a></li>
+		    
+        	<li><a href="http://www.tomhoppe.com/2009/01/how-many-times-does-x-occur-in-string.html">How many times does &quot;x&quot; occur in a string?</a></li>
+		    
+        	<li><a href="http://www.tomhoppe.com/2008/12/its-end-of-world.html">Its the end of the world...</a></li>
+		    
+        	<li><a href="http://www.tomhoppe.com/2008/12/steamboat.html">Steamboat!</a></li>
+		    
+        	<li><a href="http://www.tomhoppe.com/2008/12/time-flies-when-you-are.html">Time flies when you are ......</a></li>
+		    
+            <li><a href="http://www.tomhoppe.com/labels/All.html">All Previous</a></li>
+		</ul>
+        
+    <h2 class="sidebar-title">Categories</h2>
+   	<ul>
+    	<li><a href="http://www.tomhoppe.com/labels/All.html">All</a></li>
+        <li><a href="http://www.tomhoppe.com/labels/CSS.html">CSS</a></li>
+    	<li><a href="http://www.tomhoppe.com/labels/General.html">General (Misc)</a></li>
+        <li><a href="http://www.tomhoppe.com/labels/Javascript.html">Javascript</a></li>
+        <li><a href="http://www.tomhoppe.com/labels/Jeep.html">Jeep</a></li>
+        <li><a href="http://www.tomhoppe.com/labels/Pictures.html">Pictures</a></li>
+        <li><a href="http://www.tomhoppe.com/labels/Racing.html">Racing</a></li>
+    </ul>
+    
+    
+	<h2 class="sidebar-title">Archives</h2>
+    	<ul class="archive-list">
+	  		
+	    	<li><a href="http://www.tomhoppe.com/2007_07_01_archive.html">July 2007</a></li>
+			
+	    	<li><a href="http://www.tomhoppe.com/2008_02_01_archive.html">February 2008</a></li>
+			
+	    	<li><a href="http://www.tomhoppe.com/2008_03_01_archive.html">March 2008</a></li>
+			
+	    	<li><a href="http://www.tomhoppe.com/2008_04_01_archive.html">April 2008</a></li>
+			
+	    	<li><a href="http://www.tomhoppe.com/2008_05_01_archive.html">May 2008</a></li>
+			
+	    	<li><a href="http://www.tomhoppe.com/2008_06_01_archive.html">June 2008</a></li>
+			
+	    	<li><a href="http://www.tomhoppe.com/2008_07_01_archive.html">July 2008</a></li>
+			
+	    	<li><a href="http://www.tomhoppe.com/2008_08_01_archive.html">August 2008</a></li>
+			
+	    	<li><a href="http://www.tomhoppe.com/2008_09_01_archive.html">September 2008</a></li>
+			
+	    	<li><a href="http://www.tomhoppe.com/2008_10_01_archive.html">October 2008</a></li>
+			
+	    	<li><a href="http://www.tomhoppe.com/2008_11_01_archive.html">November 2008</a></li>
+			
+	    	<li><a href="http://www.tomhoppe.com/2008_12_01_archive.html">December 2008</a></li>
+			
+	    	<li><a href="http://www.tomhoppe.com/2009_01_01_archive.html">January 2009</a></li>
+			
+	    	<li><a href="http://www.tomhoppe.com/2009_02_01_archive.html">February 2009</a></li>
+			
+            <li><a href="http://www.tomhoppe.com/labels/All.html">All Previous</a></li>
+		</ul>
+	
+  
+	
+
+	<p id="powered-by" style="padding:0 0 10px 0;"><a href="http://www.blogger.com"><img src="http://buttons.blogger.com/bloggerbutton1.gif" alt="Powered by Blogger" border="0" /></a></p>
+
+	</div></div>
+<!-- End #sidebar -->
+	
+</div>
+<div style="clear:both;"></div>
+<!-- END OF BLOG -->
+</div>
+</div></div></div>
+
+<!-- START OF BOTTOM SECTION -->	
+<div id="borderBottom" class="clearfix">
+	<img src="http://www.tomhoppe.com/images/cornerBL.gif" width="12" height="22" alt="" border="0" class="cornerL" />
+	<img src="http://www.tomhoppe.com/images/cornerBR.gif" width="12" height="22" alt="" border="0" class="cornerR" />
+</div>
+<!-- END OF BOTTOM SECTION -->
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-4655438-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+
+</html>

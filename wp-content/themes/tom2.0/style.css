@@ -1,0 +1,388 @@
+/*
+Theme Name: Tom Hoppe
+Theme URI: http://www.tomhoppe.com/
+Description: My Theme
+Version: 2.0
+Author: Tom Hoppe
+Author URI: http://www.tomhoppe.com/
+*/
+
+/* START CSS RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+margin: 0;
+padding: 0;
+border: 0;
+outline: 0;
+font-size: 100%;
+vertical-align: baseline;
+background: transparent;
+}
+body {
+line-height: 1;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+text-decoration: none;
+}
+del {
+text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+/* END CSS RESET */
+
+
+body {
+background:#baac7f url('http://www.tomhoppe.com/images/site_bg.png') repeat;
+color:#21160a;
+font-family: Arial, Verdana, Helvetica, sans-serif;
+font-size: 11pt;
+margin:0px;
+min-width:320px;
+position:relative;
+}
+body a {
+color:#666;
+}
+.clearing {
+clear:both;
+}
+
+
+/* START Large Background Blobs. In two separate divs from background for postloading */
+#background_left {
+background:url('http://www.tomhoppe.com/images/site_top_left.jpg') left top no-repeat;
+height:288px;
+width:100%;
+position:absolute;
+z-index:1;
+top:0;
+left:0;
+}
+#background_right {
+background:url('http://www.tomhoppe.com/images/site_top_right.jpg') right top no-repeat;
+height:222px;
+width:100%;
+position:absolute;
+z-index:2;
+top:0;
+right:0;
+}
+.thin #background_right, .mini #background_right {
+background:none;
+}
+/* END Large Background Blobs. In two separate divs from background for postloading */
+
+
+/* START Vertical and Horizontal mud drops in separate divs for postloading */
+.vertical_mud {
+background:url('http://www.tomhoppe.com/images/drops_vertical.jpg') right top no-repeat;
+height:345px;
+width:147px;
+position:absolute;
+z-index:1;
+}
+.horizontal_mud {
+background:url('http://www.tomhoppe.com/images/drops_horizontal.jpg') right top no-repeat;
+height:147px;
+width:230px;
+position:absolute;
+z-index:1;
+}
+#extra_drops_1 {
+top:300px;
+right:55px;		
+}
+#extra_drops_2 {
+top:500px;
+right:10px;		
+}
+#extra_drops_3 {
+top:300px;
+left:10px;		
+}
+#extra_drops_4 {
+top:500px;
+left:30px;	
+}
+#extra_drops_5 {
+top:1000px;
+right:55px;		
+}
+#extra_drops_6 {
+top:1500px;
+right:10px;		
+}
+#extra_drops_7 {
+top:1000px;
+left:10px;		
+}
+#extra_drops_8 {
+top:1500px;
+left:30px;	
+}
+
+/* END Vertical and Horizontal mud drops in separate divs for postloading */
+
+
+/* START Main layout */
+#main {
+float: left;
+min-width:304px;
+width: 67%;
+position:relative;
+z-index:10;
+}
+#sidebar {
+float: left;
+width:33%;
+position:relative;
+z-index:10;
+margin-top: 76px;
+}
+.mini #main {
+min-width:304px;
+width: 94%;
+}
+.mini #sidebar {
+min-width:304px;
+margin-top:20px;
+width: 94%;
+}
+.panel {
+background:#f1ebd7 url('http://www.tomhoppe.com/images/post_bg.png') repeat;
+border:1px solid #35332d;
+clear:both;
+-moz-border-radius:10px;
+border-radius:10px;
+opacity:0.95;
+margin-bottom:20px;
+}
+#main .panel {
+padding:14px;
+}
+#sidebar .panel {
+padding:14px;
+}
+#main h1 {
+margin:20px 0 12px 10px;
+}
+.mini #main h1 {
+margin:10px 0 6px 10px;
+}
+.mini #main h1 img {
+height:30px;
+width:163px;
+}
+#main .wrapper {
+float:right;
+width:95%;
+}
+#sidebar .wrapper {
+float:left;
+margin-left:20px;
+width:83%;
+}
+.mini #sidebar .wrapper {
+width:95%;
+}
+#main_menu {
+display:none;
+float:right;
+list-style:none;
+margin:39px 10px 20px 0;
+}
+#main_menu li {
+display:inline;
+}
+#main_menu li a {
+color:#faf7ed;
+font-weight:bold;
+font-size:145%;
+padding:0 6px;
+text-decoration:none;
+}
+/* END Main layout */
+
+
+/* START Main Content Area (Posts) */
+#main h2  {
+font-size:110%;
+color:#302312;
+}
+#main h3 {
+font-size:110%;
+color:#ad5d0c;
+}
+#main h2 a, #main h3 a {
+color:#ad5d0c;
+text-decoration:none;
+}
+
+.singlePost h2 {
+padding:0px 0px 10px 0px;
+}
+#main .post {
+border-bottom:1px solid #999999;
+padding-bottom:10px;
+margin:0px 0px 14px 4px;
+}
+#main .post small {
+display:block;
+font-size:75%;
+font-family:"Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+letter-spacing:0.1em;
+color:#302312;
+margin:10px 0px;
+text-transform:uppercase;
+}
+#main p  {
+clear:both;
+font-size:90%;
+line-height:16px;
+margin:10px 0px;
+}
+#main span {
+font-size:90%;	
+}
+#main ul li {
+font-size:90%;
+}
+#main .post p.postmetadata {
+font-size:75%;
+color:#666;
+padding-top:5px;
+}
+#main .post p.postmetadata a {
+color:#666;
+}
+#main .post p.postmetadata small {
+font-size:90%;
+}
+#main ul.pictures {
+list-style:none;
+margin:15px 0px;
+}
+#main ul.pictures li {
+float:left;
+}
+.mini #main ul.pictures li img {
+height:51px;
+width:69px;
+}
+#main ul.pictures .e {
+clear:both;
+margin-bottom:15px;
+}
+#main ul.pictures .e a {
+clear:both;
+display:block;
+font-size:80%;
+color:#666;
+padding-top:5px;
+}
+#main ul.pictures img {
+border:1px solid #999;
+padding:4px;
+margin:0px 5px 0px 0px;
+height:60px;
+width:81px;
+}
+#main .navigation a {
+font-size:85%;
+}
+#main .navigation {
+margin:10px 0px 15px;
+}
+#main .navigation .alignleft {
+float:left; 
+padding-left:10px;
+}
+#main .navigation .alignright {
+float:right; 
+padding-right:25px;
+}
+#main .singlePost .navigation {
+padding-top:0px;
+}
+#main #respond h3, #main #comments {
+font-size:100%;
+}
+#main .commentlist {
+margin:0px 20px;
+}
+#main .commentlist li {
+font-size:90%;
+padding-bottom:10px;
+}
+.comment .commentmetadata {
+font-size:90%;
+padding:5px 0px;
+}
+pre {
+background: none repeat scroll 0 0 #EEEEEE;
+border: 1px solid #302312;
+font-size: 85%;
+margin: 10px auto;
+overflow-x: scroll;
+padding: 10px;
+width: 90%;
+}
+/* END Main Content Area (Posts) */
+
+
+/* START SideBar Panels */
+#sidebar h2 {
+color:#302312;
+list-style:none;
+text-transform:uppercase;
+font-family:"Trebuchet MS",Trebuchet,Arial,Verdana,Sans-serif;
+letter-spacing:0.1em;
+font-size:85%;
+margin-bottom:10px;
+}  
+#sidebar ul {
+list-style:none;
+} 
+#sidebar li {
+list-style:none;
+font-size:85%;
+line-height:16px;
+padding:3px 0px;
+} 
+#twitter-link {
+font-size:90%;	
+}
+#twitter_update_list {
+margin-bottom:10px;	
+}
+/* END SideBar Panels */

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+
+    <title> Video Gallery | RoyalSlider Example</title>
+
+    <meta content="Touch-enabled image gallery and content slider plugin, that focuses on providing great user experience on every desktop and mobile device." name="description">
+    <meta name="keywords" content="content slider, gallery, plugin, jquery, banner rotator">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+    <meta name="author" content="Dmitry Semenov">
+
+    <!-- slider JS files -->
+    
+    <link href="../royalslider/royalslider.css" rel="stylesheet">
+    <script  src="../royalslider/jquery-1.8.0.min.js"></script>
+    <script src="../royalslider/jquery.royalslider.min.js"></script>
+    
+    
+
+    
+    <!-- syntax highlighter -->
+    <script src="../preview-assets/js/highlight.pack.js"></script>
+    <script src="../preview-assets/js/jquery-ui-1.8.22.custom.min.js"></script>
+    <script> hljs.initHighlightingOnLoad();</script>
+
+
+    
+
+    <!-- preview-related stylesheets -->
+    <link href="../preview-assets/css/reset.css" rel="stylesheet">
+    <link href="../preview-assets/css/grid.css" rel="stylesheet">
+    <link href="../preview-assets/css/smoothness/jquery-ui-1.8.22.custom.css" rel="stylesheet">
+    <link href="../preview-assets/css/github.css" rel="stylesheet">
+
+    <!-- slider stylesheets -->
+    
+     
+        <link href="../royalslider/default/rs-default.css" rel="stylesheet">
+     
+    
+
+    <link href="../preview-assets/css/main.css" rel="stylesheet">
+
+    
+    <!-- slider css -->
+    <style>
+      #video-gallery {
+  width: 100%;
+  color: #FFF;
+}
+.videoGallery .rsCloseVideoBtn {
+  display: none;
+} 
+/* Styling thumbnails */
+.videoGallery h5 {
+  margin: 0;
+}
+.videoGallery p {
+  color: #ddd;
+  font-size: 13px;
+}
+.videoGallery .rsTmb {
+  padding: 20px;
+}
+
+.videoGallery .rsThumbs .rsThumb {
+  width: 220px;
+  height: 80px;
+  border-bottom: 1px solid #2E2E2E;
+}
+.videoGallery .rsThumbs.rsThumbsVer {
+  width: 220px;
+  padding: 0;
+}
+.videoGallery .rsThumb:hover {
+  background: #000;
+}
+.videoGallery .rsThumb.rsNavSelected {
+  background-color: #02874A;
+  border-bottom: 1px solid #009E56;
+}
+
+.rsDefault .rsOverflow,
+.rsDefault .rsSlide,
+.rsDefault .rsVideoFrameHolder,
+.rsDefault .rsThumbs {
+  background: #202020;
+}
+
+.sampleBlock {
+  left: 3%; 
+  top: 1%; 
+  width: 100%;
+  max-width: 400px;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  .videoGallery .rsTmb {
+    padding: 6px 8px;
+  }
+  .videoGallery h5 {
+    font-size: 13px;
+    line-height: 17px;
+  }
+  .videoGallery .rsThumbs.rsThumbsVer {
+    width: 100px;
+    padding: 0;
+  }
+  .videoGallery .rsThumbs .rsThumb {
+    width: 100px;
+    height: 47px;
+  }
+  .videoGallery .rsTmb p {
+    display: none;
+  }
+  .videoGallery .rsOverflow,
+  .royalSlider.videoGallery {
+    height: 300px !important;
+  }
+  .sampleBlock {
+    font-size: 14px;
+  }
+}
+
+    </style>
+    
+  </head>
+  <body >
+  <header  id="main-header" class="clearfix">  
+    <div  class="page wrapper"> 
+       <div class="col span_6">
+         <a id="logo" href="#">Royal&thinsp;Slider</a>
+         <nav>
+            <a href="http://dimsemenov.com/plugins/royal-slider/documentation/?s=dp">Documentation Online</a>
+            <a href="http://dimsemenov.com/plugins/royal-slider/build/?s=dp">Build Tool</a>
+         </nav>
+       </div>
+    </div>
+  </header>
+  <div  class="page wrapper">    
+    <div class="row clearfix">
+      <div id="page-navigation" class="col span_6"> 
+            
+          <div class="left page-nav-item"> 
+                  <a href="../gallery/" title="Previous Example: 
+  Image Gallery with Fullscreen Option">← Image Gallery with Fullscreen Option</a> 
+          </div> 
+           
+           
+          <div class="right page-nav-item"> 
+          
+                  <a href="../content-slider/" title="Next Example: 
+  HTML Content Slider">HTML Content Slider → </a> 
+          
+          </div> 
+           
+      </div> 
+    </div>
+
+    <!-- slider code start -->
+      <div class="row clearfix">
+  <div class="col span_6 fwImage">
+<div id="video-gallery" class="royalSlider videoGallery rsDefault">
+   <a class="rsImg" data-rsVideo="https://vimeo.com/45830194" href="http://b.vimeocdn.com/ts/319/715/319715493_640.jpg">
+    <div class="rsTmb">
+      <h5>Stanley Piano</h5>
+      <p>by Digital Kitchen</p>
+    </div>
+  </a>
+  <div class="rsContent">
+    <a class="rsImg" data-rsVideo="https://vimeo.com/31240369" href="http://b.vimeocdn.com/ts/210/393/210393954_640.jpg">
+      <div class="rsTmb">
+        <h5>I Believe I Can Fly</h5>
+        <p>by sebastien montaz-rosset</p>
+      </div>
+    </a>
+    <h3 class="rsABlock sampleBlock">This animated block is here just to show you that you can put anything you want inside each slide.</h3>
+  </div>
+   <a class="rsImg" data-rsVideo="https://vimeo.com/44878206" href="http://b.vimeocdn.com/ts/311/891/311891198_640.jpg">
+    <div class="rsTmb">
+      <h5>Dubstep Dispute</h5>
+      <p>by Fluxel Media</p>
+    </div>
+  </a>
+  <a class="rsImg" data-rsVideo="https://vimeo.com/45778774" href="http://b.vimeocdn.com/ts/318/502/318502540_640.jpg">
+    <div class="rsTmb">
+      <h5>The Epic & The Beasts</h5>
+      <p>by Sebastian Linda</p>
+    </div>
+  </a>
+   <a class="rsImg" data-rsVideo="https://vimeo.com/41132461" href="http://b.vimeocdn.com/ts/284/709/284709146_640.jpg">
+    <div class="rsTmb">
+      <h5>Barcode Band</h5>
+      <p>by Kang woon Jin</p>
+    </div>
+  </a>
+ <a class="rsImg" data-rsVideo="hhttps://vimeo.com/44388232" href="http://b.vimeocdn.com/ts/308/375/308375094_640.jpg">
+    <div class="rsTmb">
+      <h5>Samm Hodges Reel</h5>
+      <p>by Animal</p>
+    </div>
+  </a>
+  <a class="rsImg" data-rsVideo="http://www.youtube.com/watch?v=VDspPKDMBMo" href="../img/video/02.jpg">
+    <div class="rsTmb">
+      <h5>The Foundry Showreel</h5>
+      <p>by The Foundry</p>
+    </div>
+  </a>
+</div>
+  </div>
+ 
+</div>
+<div class="row clearfix">
+  <div class="col span_4 logo_shift">
+    <h1>Video Gallery</h1>
+    <p>Slider supports YouTube and Vimeo videos and there is basic api to add more players.</p>
+    <p>You can also add iframe of video directly inside slide, but that will block touch navigation and transition between slides will be a bit sluggish.</p>
+    <p>Despite that this example is called video gallery, you can put anything inside each slide.</p>
+  </div>
+</div>
+
+  <!-- You don't need this part of code -->
+  <div class="row clearfix">
+    <div class="tabs col span_6">
+    <ul>
+        <li><a href="#js">JavaScript</a></li>
+        <li><a href="#css">CSS</a></li>
+        <li><a href="#html">HTML</a></li>
+    </ul>
+    <div id="js"><pre><code></code></pre></div>
+    <div id="css"><pre><code>#video-gallery {
+  width: 100%;
+  color: #FFF;
+}
+.videoGallery .rsCloseVideoBtn {
+  display: none;
+} 
+/* Styling thumbnails */
+.videoGallery h5 {
+  margin: 0;
+}
+.videoGallery p {
+  color: #ddd;
+  font-size: 13px;
+}
+.videoGallery .rsTmb {
+  padding: 20px;
+}
+
+.videoGallery .rsThumbs .rsThumb {
+  width: 220px;
+  height: 80px;
+  border-bottom: 1px solid #2E2E2E;
+}
+.videoGallery .rsThumbs.rsThumbsVer {
+  width: 220px;
+  padding: 0;
+}
+.videoGallery .rsThumb:hover {
+  background: #000;
+}
+.videoGallery .rsThumb.rsNavSelected {
+  background-color: #02874A;
+  border-bottom: 1px solid #009E56;
+}
+
+.rsDefault .rsOverflow,
+.rsDefault .rsSlide,
+.rsDefault .rsVideoFrameHolder,
+.rsDefault .rsThumbs {
+  background: #202020;
+}
+
+.sampleBlock {
+  left: 3%; 
+  top: 1%; 
+  width: 100%;
+  max-width: 400px;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  .videoGallery .rsTmb {
+    padding: 6px 8px;
+  }
+  .videoGallery h5 {
+    font-size: 13px;
+    line-height: 17px;
+  }
+  .videoGallery .rsThumbs.rsThumbsVer {
+    width: 100px;
+    padding: 0;
+  }
+  .videoGallery .rsThumbs .rsThumb {
+    width: 100px;
+    height: 47px;
+  }
+  .videoGallery .rsTmb p {
+    display: none;
+  }
+  .videoGallery .rsOverflow,
+  .royalSlider.videoGallery {
+    height: 300px !important;
+  }
+  .sampleBlock {
+    font-size: 14px;
+  }
+}
+</code></pre></div>
+    <div id="html"><pre id="html-code"><code></code></pre></div>
+    </div>
+  </div>
+  <script>
+    jQuery(document).ready(function(e) {
+        var code = $('#html-code code');
+        if(code.is(':empty')) {
+          var rsCode = $('.royalSlider-preview');
+          if(!rsCode.length) {
+              rsCode = $('.royalSlider');
+          }
+          rsCode = rsCode.clone().removeClass('royalSlider-preview').wrap('<div></div>').parent().html();
+          rsCode = htmlencode(rsCode);
+          code.html(rsCode);
+        }
+        $('#js code').html( htmlencode($('#addJS').html()) );
+        $( ".tabs" ).tabs();
+    });
+    function htmlencode(str) {
+      if(str) {
+         return str.replace(/[&<>"']/g, function($0) {
+            return "&" + {"&":"amp", "<":"lt", ">":"gt", '"':"quot", "'":"#39"}[$0] + ";";
+        });
+      }
+    }   
+  </script>
+  <div class="row clearfix">
+    <h2>List of Starter Templates</h2>
+  <ul id="templates-list" class="col span_6">
+  
+  <li><a href="../content-slider/"><img width="341" height="250" src="../img/previews/content-slider.jpg" /><h3>HTML Content Slider</h3></a></li>
+  
+  <li><a href="../video-gallery/"><img width="341" height="250" src="../img/previews/video-gallery.jpg" /><h3>Video Gallery</h3></a></li>
+  
+  <li><a href="../gallery/"><img width="341" height="250" src="../img/previews/gallery.jpg" /><h3>Image Gallery with Fullscreen Option</h3></a></li>
+  
+  <li><a href="../visible-nearby/"><img width="341" height="250" src="../img/previews/visible-nearby.jpg" /><h3>Gallery with Visible Nearby Images</h3></a></li>
+  
+  <li><a href="../animated-blocks/"><img width="341" height="250" src="../img/previews/animated-blocks.jpg" /><h3>Slider with Animated Blocks</h3></a></li>
+  
+  <li><a href="../full-width/"><img width="341" height="250" src="../img/previews/fullwidth.jpg" /><h3>Full Width Slider</h3></a></li>
+  
+  <li><a href="../slider-in-lightbox/"><img width="341" height="250" src="../img/previews/lightbox.jpg" /><h3>Slider in Lightbox</h3></a></li>
+  
+  <li><a href="../simple-vertical/"><img width="341" height="250" src="../img/previews/simple-vertical.jpg" /><h3>Simple Vertical Slider</h3></a></li>
+  
+  <li><a href="../gallery-vertical-fade/"><img width="341" height="250" src="../img/previews/gallery-fade.jpg" /><h3>Gallery with Fade and Vertical Thumbs</h3></a></li>
+  
+  <li><a href="../slider-in-laptop/"><img width="341" height="250" src="../img/previews/slider-in-laptop.jpg" /><h3>Slider in Laptop</h3></a></li>
+  
+  <li><a href="../gallery-with-deeplinking/"><img width="341" height="250" src="../img/previews/deeplinking.jpg" /><h3>Gallery with Deep Linking</h3></a></li>
+  
+  </ul>
+</div>
+  <footer class="row clearfix" id="main-footer">
+    <div class="col span_6">
+      <nav><a href="http://dimsemenov.com/subscribe.html?s=sb">Email Newsletter</a><a href="http://twitter.com/dimsemenov">Twitter</a><a href="mailto:diiiimaaaa@gmail.com?subject=RoyalSlider bug">Report Bug</a><a href="http://dimsemenov.com/plugins/royal-slider/support/">Contact support</a></nav>
+      <p class="copy">© 2011-2012 <a href="http://dimsemenov.com">Dmitry Semenov</a></p>
+    </div>
+  </footer>
+   <!-- tabs & footer end /// --> 
+   
+  
+    <script id="addJS">jQuery(document).ready(function($) {
+  $('#video-gallery').royalSlider({
+    arrowsNav: false,
+    fadeinLoadedSlide: true,
+    controlNavigationSpacing: 0,
+    controlNavigation: 'thumbnails',
+
+    thumbs: {
+      autoCenter: false,
+      fitInViewport: true,
+      orientation: 'vertical',
+      spacing: 0
+    },
+    keyboardNavEnabled: true,
+    imageScaleMode: 'fill',
+    imageAlignCenter:true,
+    loop: false,
+    loopRewind: true,
+    numImagesToPreload: 3,
+    video: {
+      autoHideArrows:true,
+      autoHideControlNav:false,
+      autoHideBlocks: true
+    }, 
+    autoScaleSlider: true, 
+    autoScaleSliderWidth: 960,     
+    autoScaleSliderHeight: 450
+  });
+});
+</script>
+  
+  </div>
+  </body>
+</html>

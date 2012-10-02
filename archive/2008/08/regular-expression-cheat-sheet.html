@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <title>TomHoppe.com: Regular Expression Cheat Sheet</title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="generator" content="Blogger" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="http://www.blogger.com/favicon.ico"/>
+<link rel="alternate" type="application/atom+xml" title="TomHoppe.com - Atom" href="http://www.tomhoppe.com/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="TomHoppe.com - RSS" href="http://www.tomhoppe.com/rss.xml" />
+<link rel="service.post" type="application/atom+xml" title="TomHoppe.com - Atom" href="http://www.blogger.com/feeds/6064498188306872783/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=6064498188306872783" />
+<link rel="alternate" type="application/atom+xml" title="TomHoppe.com - Atom" href="http://www.blogger.com/feeds/6064498188306872783/2578811448765889401/comments/default" />
+ <link rel="stylesheet" type="text/css" href="http://www.blogger.com/css/blog_controls.css"/> <link rel="stylesheet" type="text/css" href="http://www.blogger.com/dyn-css/authorization.css?targetBlogID=6064498188306872783&zx=e098ca30-f1ca-4a01-9164-7b82b52bbebe"/>
+
+    <!-- used to create popup larger image -->
+    <link rel="stylesheet" href="http://www.tomhoppe.com/css/thickbox.css" type="text/css"/>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+    <script type="text/javascript" src="http://www.tomhoppe.com/js/thickbox.js"></script>
+    <!-- used to create popup larger image -->
+    
+    <link rel="stylesheet" type="text/css" href="http://www.tomhoppe.com/css/siteStyles.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.tomhoppe.com/css/blogStyles.css" />
+    
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	
+</head>
+
+<body>
+<div id="mainCentering">
+<!-- START OF TOP SECTION -->
+<div id="borderTop" class="clearfix">
+	<img src="http://www.tomhoppe.com/images/cornerTL.gif" width="13" height="18" alt="" border="0" class="cornerL" />
+	<img src="http://www.tomhoppe.com/images/cornerTR.gif" width="13" height="18" alt="" border="0" class="cornerR" />
+</div>
+
+<div id="border1"><div id="border2"><div id="border3">
+<div id="mainContainer">
+	<div id="topBar" class="clearfix">
+		<h1>
+			<a href="http://www.tomhoppe.com">tomhoppe.com<br /></a>
+		</h1>
+		<div class="siteDesc">
+			Racing, Web Development, Photography, and Beer...Stuff that matters. 
+		</div>
+	</div>    
+<!-- END OF TOP SECTION --> 
+
+
+<!-- START OF ACTUAL BLOG -->
+
+<div id="content" class="clearfix">
+	
+	<!-- Begin #main -->
+	<div id="main"><div id="main2">
+
+	
+
+    
+		<h2 class="date-header">Monday, August 11, 2008</h2>
+	
+
+	<!-- Begin .post -->
+	<div class="post"><a name="2578811448765889401"></a>
+		
+			<h3 class="post-title">
+			<a href="http://www.tomhoppe.com/2008/08/regular-expression-cheat-sheet.html">Regular Expression Cheat Sheet</a>
+			</h3>
+		
+
+		<div class="post-body">
+            <div>
+                <div style="clear:both;"></div><p>I just wanted to give myself a reference for a regular expression cheat sheet. This is much easier then forgetting and having to google for what I need. Pretty much all you ever need to know to setup a regexp.</p>
+
+<table>
+<tbody><tr valign="top">
+<td><code>.</code></td>
+<td>Matches any single character (many applications exclude newlines, and exactly which characters are considered newlines is flavor, character encoding, and platform specific, but it is safe to assume that the line feed character is included). Within POSIX bracket expressions, the dot character matches a literal dot. For example, <code>a.c</code> matches "<i>abc</i>", etc., but <code>[a.c]</code> matches only "<i>a</i>", "<i>.</i>", or "<i>c</i>".</td>
+
+</tr>
+<tr valign="top">
+<td><code>[&nbsp;]</code></td>
+<td>A bracket expression. Matches a single character that is contained within the brackets. For example, <code>[abc]</code> matches "<i>a</i>", "<i>b</i>", or "<i>c</i>". <code>[a-z]</code> specifies a range which matches any lowercase letter from "<i>a</i>" to "<i>z</i>". These forms can be mixed: <code>[abcx-z]</code> matches "<i>a</i>", "<i>b</i>", "<i>c</i>", "<i>x</i>", "<i>y</i>", and "<i>z</i>", as does <code>[a-cx-z]</code>.
+
+<p>The <code>-</code> character is treated as a literal character if it is the last or the first character within the brackets, or if it is escaped with a backslash: <code>[abc-]</code>, <code>[-abc]</code>, or <code>[a\-bc]</code>.</p>
+</td>
+</tr>
+<tr valign="top">
+<td><code>[^&nbsp;]</code></td>
+
+<td>Matches a single character that is not contained within the brackets. For example, <code>[^abc]</code> matches any character other than "<i>a</i>", "<i>b</i>", or "<i>c</i>". <code>[^a-z]</code> matches any single character that is not a lowercase letter from "<i>a</i>" to "<i>z</i>". As above, literal characters and ranges can be mixed.</td>
+
+</tr>
+<tr valign="top">
+<td><code>^</code></td>
+<td>Matches the starting position within the string. In line-based tools, it matches the starting position of any line.</td>
+</tr>
+<tr valign="top">
+<td><code>$</code></td>
+<td>Matches the ending position of the string or the position just before a string-ending newline. In line-based tools, it matches the ending position of any line.</td>
+</tr>
+<tr valign="top">
+<td><code>\(&nbsp;\)</code></td>
+
+<td>Defines a marked subexpression. The string matched within the parentheses can be recalled later (see the next entry, <code>\<i>n</i></code>). A marked subexpression is also called a block or capturing group.</td>
+</tr>
+<tr valign="top">
+<td><code>\<i>n</i></code></td>
+<td>Matches what the <i>n</i>th marked subexpression matched, where <i>n</i> is a digit from 1 to 9. This construct is theoretically <b>irregular</b> and was not adopted in the POSIX ERE syntax. Some tools allow referencing more than nine capturing groups.</td>
+
+</tr>
+<tr valign="top">
+<td><code>*</code></td>
+<td>Matches the preceding element zero or more times. For example, <code>ab*c</code> matches "<i>ac</i>", "<i>abc</i>", "<i>abbbc</i>", etc. <code>[xyz]*</code> matches "", "<i>x</i>", "<i>y</i>", "<i>z</i>", "<i>zx</i>", "<i>zyx</i>", "<i>xyzzy</i>", and so on. <code>\(ab\)*</code> matches "", "<i>ab</i>", "<i>abab</i>", "<i>ababab</i>", and so on.</td>
+
+</tr>
+<tr valign="top">
+<td><code>\{<i>m</i>,<i>n</i>\}</code></td>
+<td>Matches the preceding element at least <i>m</i> and not more than <i>n</i> times. For example, <code>a\{3,5\}</code> matches only "<i>aaa</i>", "<i>aaaa</i>", and "<i>aaaaa</i>". This is not found in a few, older instances of regular expressions.</td>
+
+</tr>
+</tbody></table><div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://www.tomhoppe.com/labels/All.html">All</a>, <a rel='tag' href="http://www.tomhoppe.com/labels/CSS.html">CSS</a>, <a rel='tag' href="http://www.tomhoppe.com/labels/Javascript.html">Javascript</a></p>
+            </div>
+		</div>
+
+		<p class="post-footer">
+			<em>posted by Tom Hoppe at 6:58 PM</em>
+			  
+            
+		</p>
+
+	</div>
+	<!-- End .post -->
+    
+  	<!-- Begin #comments -->
+	
+	<div id="comments">
+
+	<a name="comments"></a>
+        <h4>0 Comments:</h4>
+        <dl id="comments-block">
+      
+    </dl>
+	
+    <p class="comment-timestamp">
+    	<a class="comment-link" href="https://www.blogger.com/comment.g?blogID=6064498188306872783&postID=2578811448765889401&isPopup=true" onclick="window.open(this.href, 'bloggerPopup', 'toolbar=0,scrollbars=1,location=0,statusbar=1,menubar=0,resizable=1,width=400,height=450');return false;">Post a Comment</a>
+    </p>
+    	    
+
+    
+
+
+	<p class="comment-timestamp">
+	<a href="http://www.tomhoppe.com/">&lt;&lt; Home</a>
+    </p>
+    </div>
+
+	
+
+  	<!-- End #comments -->
+
+	
+	</div>
+	</div>
+
+	<!-- End #main -->
+
+
+	<!-- Begin #sidebar -->
+	<div id="sidebar"><div id="sidebar2">
+   
+	<h2 class="sidebar-title">Previous Posts</h2>
+    	<ul id="recently">
+		    
+        	<li><a href="http://www.tomhoppe.com/2008/07/granite.html">Granite!</a></li>
+		    
+        	<li><a href="http://www.tomhoppe.com/2008/07/kitchen-continues.html">The Kitchen continues</a></li>
+		    
+        	<li><a href="http://www.tomhoppe.com/2008/07/kitchen-part-deux.html">Kitchen Part Deux</a></li>
+		    
+        	<li><a href="http://www.tomhoppe.com/2008/07/road-atlanta-win.html">Road Atlanta Win</a></li>
+		    
+        	<li><a href="http://www.tomhoppe.com/2008/07/laptop-drive-of-shame.html">The Laptop &quot;Drive of Shame&quot;</a></li>
+		    
+        	<li><a href="http://www.tomhoppe.com/2008/07/finally-worked-on-race-car.html">Finally worked on the race car</a></li>
+		    
+        	<li><a href="http://www.tomhoppe.com/2008/07/never-fear-iphone-is-here.html">Never fear, the iPhone is here</a></li>
+		    
+        	<li><a href="http://www.tomhoppe.com/2008/07/more-4-wheeling.html">More 4 Wheeling!</a></li>
+		    
+        	<li><a href="http://www.tomhoppe.com/2008/06/better-firefox-bookmarking-toolbar.html">Better Firefox bookmarks toolbar</a></li>
+		    
+        	<li><a href="http://www.tomhoppe.com/2008/06/dogs-and-new-lens.html">Dogs and new lens</a></li>
+		    
+            <li><a href="http://www.tomhoppe.com/labels/All.html">All Previous</a></li>
+		</ul>
+        
+    <h2 class="sidebar-title">Categories</h2>
+   	<ul>
+    	<li><a href="http://www.tomhoppe.com/labels/All.html">All</a></li>
+        <li><a href="http://www.tomhoppe.com/labels/CSS.html">CSS</a></li>
+    	<li><a href="http://www.tomhoppe.com/labels/General.html">General (Misc)</a></li>
+        <li><a href="http://www.tomhoppe.com/labels/Javascript.html">Javascript</a></li>
+        <li><a href="http://www.tomhoppe.com/labels/Jeep.html">Jeep</a></li>
+        <li><a href="http://www.tomhoppe.com/labels/Pictures.html">Pictures</a></li>
+        <li><a href="http://www.tomhoppe.com/labels/Racing.html">Racing</a></li>
+    </ul>
+    
+    
+  
+	
+
+	<p id="powered-by" style="padding:0 0 10px 0;"><a href="http://www.blogger.com"><img src="http://buttons.blogger.com/bloggerbutton1.gif" alt="Powered by Blogger" border="0" /></a></p>
+
+	</div></div>
+<!-- End #sidebar -->
+	
+</div>
+<div style="clear:both;"></div>
+<!-- END OF BLOG -->
+</div>
+</div></div></div>
+
+<!-- START OF BOTTOM SECTION -->	
+<div id="borderBottom" class="clearfix">
+	<img src="http://www.tomhoppe.com/images/cornerBL.gif" width="12" height="22" alt="" border="0" class="cornerL" />
+	<img src="http://www.tomhoppe.com/images/cornerBR.gif" width="12" height="22" alt="" border="0" class="cornerR" />
+</div>
+<!-- END OF BOTTOM SECTION -->
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-4655438-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+
+</html>

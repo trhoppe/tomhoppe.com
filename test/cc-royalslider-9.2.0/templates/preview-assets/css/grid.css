@@ -1,0 +1,146 @@
+/* Query Styles for 1024px and up */
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.clearfix {
+    zoom:1;
+}
+
+.wrapper {
+	width: 90%;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+body {
+    zoom: 1;
+}
+
+
+/*!
+ * Gridpak Beta CSS
+ *
+ * Generator - http://gridpak.com/
+ * Created by @erskinedesign
+ */
+ 
+ 
+
+/* Reusable column setup */
+.col,
+.main-features li {
+    border:0px solid rgba(0,0,0,0);
+    float:left;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    -moz-background-clip:padding-box !important;
+    -webkit-background-clip:padding-box !important;
+    background-clip:padding-box !important;
+}
+.col,
+.main-features li {
+    margin-left:1%;
+    padding:0 1%;
+}
+
+.row .col:first-child,
+.main-features li:first-child {
+    margin-left:0;
+}
+.page .row {
+    margin-bottom: 24px;
+}
+
+
+
+.span_1 {
+    width:15.8333333333%;
+}
+.span_2,
+.main-features li {
+    width:32.6666666667%;
+}
+.span_3 {
+    width:49.5%;
+}
+.span_4 {
+    width:66.3333333333%;
+}
+.span_5 {
+    width:83.1666666667%;
+}
+.span_6 {
+    margin-left:0;
+    width:100%;
+}
+.logo_shift {
+    margin-left: 156px !important;
+}
+    
+
+
+
+    /* 1. 6 Column Grid 0px - 839px 
+    ----------------------------------------------------------------------------- 
+    
+    Span 1:    15.0%
+    Span 2:    32.0%
+    Span 3:    49.0%
+    Span 4:    66.0%
+    Span 5:    83.0%
+    Span 6:    100%
+    
+    ----------------------------------------------------------------------------- */
+
+    @media screen and (min-width: 0px) and (max-width: 760px) {
+        
+        .col,
+        .main-features li {
+            margin: 30px 5%;
+            width: 90%;
+        }
+        
+        .row .col:first-child,
+        .main-features li:first-child {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
+        .wrapper {
+            width: 100%;
+        }
+
+        
+        .span_1,
+        .span_2,
+        .span_3,
+        .span_4,
+        .span_5,
+        .span_6 {
+            width: 90%;   
+            padding: 0;
+        }
+        .fwImage {
+            width: 100%;
+            margin: 0 !important;
+            padding: 0;
+        }
+        #main-footer {
+            text-align: center;
+        }
+        .logo_shift {
+           margin-left: 5% !important;
+        }
+    
+        
+    }
