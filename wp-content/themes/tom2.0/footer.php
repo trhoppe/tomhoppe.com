@@ -10,7 +10,7 @@
 <?php wp_footer(); ?>
 
 
-<script type="text/javascript" src="http://www.tomhoppe.com/js/jquery.js"></script>
+<script type="text/javascript" src="http://www.tomhoppe.com/js/jquery-1.8.0.js"></script>
 <script type="text/javascript" src="http://www.tomhoppe.com/js/jquery.colorbox-min.js"></script>
 <script type="text/javascript" src="http://www.tomhoppe.com/js/jquery.royalslider.js"></script>
 
