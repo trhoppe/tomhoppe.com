@@ -6,10 +6,7 @@
 
 get_header(); ?>
 
-<div id="main">
-	<div class="wrapper">
-		<h1><a href="http://www.tomhoppe.com"><img src="http://www.tomhoppe.com/images/site_logo.png" border="0" width="247" height="45" alt="tomhoppe.com" /></a></h1>
-		<div class="panel">
+
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<div class="post" id="post-<?php the_ID(); ?>">

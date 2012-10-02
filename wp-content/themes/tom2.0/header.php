@@ -41,3 +41,8 @@
     <div id="extra_drops_8" class="vertical_mud"></div>
     
     <div class="centering"> 
+
+    <div id="main">
+    <div class="wrapper">
+        <h1><a href="http://www.tomhoppe.com"><img src="http://www.tomhoppe.com/wp-content/themes/tom2.0/images/site_logo.png" border="0" width="247" height="45" alt="tomhoppe.com" /></a></h1>
+        <div class="panel">

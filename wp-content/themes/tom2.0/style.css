@@ -62,7 +62,7 @@ border-spacing: 0;
 
 
 body {
-background:#baac7f url('http://www.tomhoppe.com/images/site_bg.png') repeat;
+background:#baac7f url('http://www.tomhoppe.com/wp-content/themes/tom2.0/images/site_bg.png') repeat;
 color:#21160a;
 font-family: Arial, Verdana, Helvetica, sans-serif;
 font-size: 11pt;
@@ -80,7 +80,7 @@ clear:both;
 
 /* START Large Background Blobs. In two separate divs from background for postloading */
 #background_left {
-background:url('http://www.tomhoppe.com/images/site_top_left.jpg') left top no-repeat;
+background:url('ttp://www.tomhoppe.com/wp-content/themes/tom2.0/images/site_top_left.jpg') left top no-repeat;
 height:288px;
 width:100%;
 position:absolute;
@@ -89,7 +89,7 @@ top:0;
 left:0;
 }
 #background_right {
-background:url('http://www.tomhoppe.com/images/site_top_right.jpg') right top no-repeat;
+background:url('ttp://www.tomhoppe.com/wp-content/themes/tom2.0/images/site_top_right.jpg') right top no-repeat;
 height:222px;
 width:100%;
 position:absolute;
@@ -105,14 +105,14 @@ background:none;
 
 /* START Vertical and Horizontal mud drops in separate divs for postloading */
 .vertical_mud {
-background:url('http://www.tomhoppe.com/images/drops_vertical.jpg') right top no-repeat;
+background:url('ttp://www.tomhoppe.com/wp-content/themes/tom2.0/images/drops_vertical.jpg') right top no-repeat;
 height:345px;
 width:147px;
 position:absolute;
 z-index:1;
 }
 .horizontal_mud {
-background:url('http://www.tomhoppe.com/images/drops_horizontal.jpg') right top no-repeat;
+background:url('ttp://www.tomhoppe.com/wp-content/themes/tom2.0/images/drops_horizontal.jpg') right top no-repeat;
 height:147px;
 width:230px;
 position:absolute;
@@ -179,7 +179,7 @@ margin-top:20px;
 width: 94%;
 }
 .panel {
-background:#f1ebd7 url('http://www.tomhoppe.com/images/post_bg.png') repeat;
+background:#f1ebd7 url('ttp://www.tomhoppe.com/wp-content/themes/tom2.0/images/post_bg.png') repeat;
 border:1px solid #35332d;
 clear:both;
 -moz-border-radius:10px;
