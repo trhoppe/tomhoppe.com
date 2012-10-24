@@ -281,6 +281,26 @@ overflow-x: scroll;
 padding: 10px;
 width: 90%;
 }
+.entry ul {
+margin-left:10px;
+}
+.entry ul li:before {
+content: "• ";
+color: #666; 
+}
+.entry ul li {
+line-height: 16px;
+margin-bottom:2px;
+text-indent: -10px;
+padding-left: 10px;
+}
+.entry ul.thumbwrap li:before, ul.pictures li:before {
+content: "";
+}
+.entry ul.thumbwrap li, ul.pictures li:before {
+text-indent:0;
+}
+
 /* END Main Content Area (Posts) */
 
 
